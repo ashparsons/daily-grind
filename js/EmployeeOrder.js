@@ -5,6 +5,6 @@ function EmployeeOrder() {
 EmployeeOrder.prototype = Object.create(Order.prototype);
 
 EmployeeOrder.prototype.getPrice = function() {
-    var employeePrice = 0.25 * Order.getPrice;
-    return Order.getPrice - employeePrice;
+    var employeePrice = Order.getPrice * 0.75;
+    return employeePrice;
 }

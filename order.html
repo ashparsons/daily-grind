@@ -103,20 +103,70 @@
                 <h3 class="text-center">Or Customise Your Coffee</h3>  
                 <br>
                 <div class="row">
+                    <p class="text-center">Select Size and Style</p> 
+                    <br>
                     <div class="col-sm-6 form-group">
-                        <input class="form-control" id="name" name="name" placeholder="Name" type="text" required>
+                        <select class="form-control" id="sel1">
+                            <option>Select Size</option>
+                            <option>Short (R12.00)</option>
+                            <option>Tall (R14.00)</option>
+                            <option>Grande (R16.00)</option>
+                        </select>
                     </div>
                     <div class="col-sm-6 form-group">
-                        <input class="form-control" id="email" name="email" placeholder="Email" type="email" required>
+                        <select class="form-control" id="sel1">
+                            <option>Select Style</option>
+                            <option>Americano</option>
+                            <option>Cappuccino - w/Cream (+ R1.00)</option>
+                            <option>Latte - w/Milk (+ R0.50)</option>
+                        </select>
                     </div>
                 </div>
-                <textarea class="form-control" id="comments" name="comments" placeholder="Comment" rows="5"></textarea>
                 <br>
+
+                <div class="row">
+                    <p class="text-center">Add Extras</p> 
+                    <br>
+                    <div class="col-sm-4 form-group">
+                        <p class="text-center">Extra Espresso (+ R0.75)</p> 
+                        <input class="form-control" type="number" value="0" id="example-number-input">
+                    </div>
+                    <div class="col-sm-4 form-group">
+                        <p class="text-center">Extra Milk (+ R0.50)</p>
+                        <input class="form-control" type="number" value="0" id="example-number-input">
+                    </div>
+                    <div class="col-sm-4 form-group">
+                        <p class="text-center">Extra Cream (+ R1.00)</p>
+                        <input class="form-control" type="number" value="0" id="example-number-input">
+                    </div>
+                </div>
+                <br>
+
+                <div class="row" style="margin-left:250px;">
+                    <div class="col-sm-4 form-group">
+                        <p class="text-center">Add Sugar (+ R0.20)</p>
+                        <input class="form-control" type="number" value="0" id="example-number-input">
+                    </div>
+                    <div class="col-sm-4 form-group">
+                        <p class="text-center">Add Syrup (+ R5.00)</p>
+                        <select class="form-control" id="sel1">
+                            <option>Select Syrup</option>
+                            <option>Hazelnut</option>
+                            <option>Caramel</option>
+                        </select>
+                    </div>
+                </div>
+                <br>
+
                 <div class="row">
                     <div class="col-md-12 form-group">
-                        <button class="btn pull-right" type="submit">Send</button>
+                        <button class="btn pull-right" type="submit">Order!</button>
+                    </div>
+                    <div class="col-md-12 form-group">
+                        <button class="btn pull-right" type="submit">Employee Order!</button>
                     </div>
                 </div>
+                    
             </div>
         </div>
 
