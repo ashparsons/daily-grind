@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Daily Grind - Order</title>
+        <link rel="stylesheet" href="main.css">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+        <link href="https://fonts.googleapis.com/css?family=Lato" rel="stylesheet" type="text/css">
+        <link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet" type="text/css">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+        <script src="/js/main.js"></script>
+    </head>
+
+    <body id="myPage" data-spy="scroll" data-target=".navbar" data-offset="50">
+
+        <nav class="navbar navbar-default navbar-fixed-top">
+            <div class="container-fluid">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>                        
+                </button>
+                <a class="navbar-brand" href="home.html">Daily Grind</a>
+            </div>
+
+            <div class="collapse navbar-collapse" id="myNavbar">
+                <ul class="nav navbar-nav navbar-right">
+                    <li><a href="home.html"><span class="glyphicon glyphicon-home"></a></li>
+                    <li><a href="order.html"><span class="glyphicon glyphicon-shopping-cart"></a></li>
+                </ul>
+            </div>
+            </div>
+        </nav>
+
+        <div id="carousel" class="carousel slide" data-ride="carousel">
+            <!-- Indicators -->
+            <ol class="carousel-indicators">
+                <li data-target="#carousel" data-slide-to="0" class="active"></li>
+                <li data-target="#carousel" data-slide-to="1"></li>
+                <li data-target="#carousel" data-slide-to="2"></li>
+            </ol>
+
+            <!-- Wrapper for slides -->
+            <div class="carousel-inner" role="listbox">
+
+                <div class="item active">
+                    <img src="img/img6.jpg" alt="img1">
+                    <div class="carousel-caption">
+                        <h3>Daily Grind</h3>
+                        <p>Try our Cappuccinos.</p>
+                    </div>   
+                </div>
+
+                <div class="item">
+                    <img src="img/img5.jpg" alt="img2">
+                    <div class="carousel-caption">
+                        <h3>Daily Grind</h3>
+                        <p>Try our Americanos.</p>
+                    </div>   
+                </div>
+
+                <div class="item">
+                    <img src="img/img4.jpg" alt="img3">
+                    <div class="carousel-caption">
+                        <h3>Daily Grind</h3>
+                        <p>Try our Lattes.</p>
+                    </div>   
+                </div>
+
+            </div>
+        </div>
+
+        <!-- Container (The Popular Choices Section) -->
+        <div id="band" class="container text-center">
+            <h3>Select a Popular Order</h3>
+            <br>
+            <div class="row">
+                <div class="col-md-4">
+                    <h4>Pretoria Punch</h4>
+                    <p>Tall Americano</p>
+                    <p>Extra Shot</p>
+                </div>
+                <div class="col-md-4">
+                    <h4>Joburg Juice</h4>
+                    <p>Short Latte</p>
+                    <p>2 x Sugar</p>
+                    <p>Cream</p>
+                    <p>Hazelnut Syrup</p>
+                </div>
+                <div class="col-md-4">
+                    <h4>Cape Comfort</h4>
+                    <p>Grande Latte</p>
+                    <p>Caramel Syrup</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Container (Custom Section) -->
+        <div id="tour" class="bg-1">
+            <div class="container">
+                <h3 class="text-center">Or Customise Your Coffee</h3>  
+                <br>
+                <div class="row">
+                    <div class="col-sm-6 form-group">
+                        <input class="form-control" id="name" name="name" placeholder="Name" type="text" required>
+                    </div>
+                    <div class="col-sm-6 form-group">
+                        <input class="form-control" id="email" name="email" placeholder="Email" type="email" required>
+                    </div>
+                </div>
+                <textarea class="form-control" id="comments" name="comments" placeholder="Comment" rows="5"></textarea>
+                <br>
+                <div class="row">
+                    <div class="col-md-12 form-group">
+                        <button class="btn pull-right" type="submit">Send</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+        <!-- Container (Contact Section) -->
+        <div id="contact" class="container">
+            <h3 class="text-center">Order Summary</h3>
+            
+        </div>
+        <br>
+
+        <!-- Footer -->
+        <footer class="text-center">
+            <a class="up-arrow" href="#myPage" data-toggle="tooltip" title="TO TOP">
+                <span class="glyphicon glyphicon-chevron-up"></span>
+            </a><br><br>
+            <p>Daily Grind Coffee Co.</p> 
+        </footer>
+
+        <script>
+        
+        </script>
+
+
+        <!--Scripts-->
+        <script src="/node_modules/jquery/dist/jquery.js"></script>
+        <script src="/node_modules/bootstrap/dist/js/bootstrap.js"></script>
+        <script src="js/Subcomponent.js"></script>
+        <script src="js/Coffee.js"></script>
+        <script src="js/Order.js"></script>
+        <script src="js/EmployeeOrder.js"></script>
+        <script src="js/test.js"></script>
+    </body>
+</html>

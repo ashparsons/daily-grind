@@ -1,0 +1,14 @@
+{
+  "name": "coffee",
+  "version": "1.0.0",
+  "description": "A coffee ordering website",
+  "main": "app/index.js",
+  "scripts": {},
+  "author": "arparsons",
+  "license": "ISC",
+  "dependencies": {
+    "bootstrap": "3.3.7",
+    "jasmine": "2.5.3",
+    "jquery": "3.2.1"
+  }
+}

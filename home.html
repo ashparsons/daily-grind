@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Daily Grind</title>
+        <link rel="stylesheet" href="main.css">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+        <link href="https://fonts.googleapis.com/css?family=Lato" rel="stylesheet" type="text/css">
+        <link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet" type="text/css">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+        <script src="/js/main.js"></script>
+    </head>
+
+    <body id="myPage" data-spy="scroll" data-target=".navbar" data-offset="50">
+
+        <nav class="navbar navbar-default navbar-fixed-top">
+            <div class="container-fluid">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>                        
+                </button>
+                <a class="navbar-brand" href="home.html">Daily Grind</a>
+            </div>
+
+            <div class="collapse navbar-collapse" id="myNavbar">
+                <ul class="nav navbar-nav navbar-right">
+                    <li><a href="home.html"><span class="glyphicon glyphicon-home"></a></li>
+                    <li><a href="order.html"><span class="glyphicon glyphicon-shopping-cart"></a></li>
+                </ul>
+            </div>
+            </div>
+        </nav>
+
+        <div id="carousel" class="carousel slide" data-ride="carousel">
+            <!-- Indicators -->
+            <ol class="carousel-indicators">
+                <li data-target="#carousel" data-slide-to="0" class="active"></li>
+                <li data-target="#carousel" data-slide-to="1"></li>
+                <li data-target="#carousel" data-slide-to="2"></li>
+            </ol>
+
+            <!-- Wrapper for slides -->
+            <div class="carousel-inner" role="listbox">
+
+                <div class="item active">
+                    <img src="img/img1.jpg" alt="img1">
+                    <div class="carousel-caption">
+                        <h3>Daily Grind</h3>
+                        <p>We aim to create a rustic, relaxing environment.</p>
+                    </div>   
+                </div>
+
+                <div class="item">
+                    <img src="img/img2.jpg" alt="img2">
+                    <div class="carousel-caption">
+                        <h3>Daily Grind</h3>
+                        <p>Our coffees are high quality and delicious.</p>
+                    </div>   
+                </div>
+
+                <div class="item">
+                    <img src="img/img3.jpg" alt="img3">
+                    <div class="carousel-caption">
+                        <h3>Daily Grind</h3>
+                        <p>A place to meet friends, work, and relax.</p>
+                    </div>   
+                </div>
+
+            </div>
+        </div>
+
+        <!-- Container (The About Section) -->
+        <div id="band" class="container text-center">
+            <h3>About Daily Grind</h3>
+            <p>Daily Grind - your coffee, your way. We strive to consistently make delicious coffees for everyone from the Average Joe 
+                <br>to the Coffee Aficionado. Head over to our Order Here! Page to start sipping on Cappaccinnos, Lattes and Americanos made to your tastes!
+                <br>    
+                We offer an escape from the "Daily Grind."
+            </p>
+            <br>
+            <br>
+            <div class="row">
+                <h3>Find one of our physical locations below :</h3>
+                <br>
+                <div class="col-sm-4">
+                    <p class="text-center"><strong>Centurion</strong></p><br>
+                    <a href="#demo" data-toggle="collapse">
+                        See More!
+                        <br>
+                        <br>
+                    </a>
+                    <div id="demo" class="collapse">
+                        <iframe class="img-circle" src="https://maps.google.com/maps?q=centurion%20mall&t=&z=13&ie=UTF8&iwloc=&output=embed" 
+                        width="255" height="255" frameborder="0" style="border:0" allowfullscreen></iframe>
+                        <br>
+                        <p>Our First Store</p>
+                        <p>Opened in 2001</p>
+                        <p>Highlight : Foam Art</p>
+                    </div>
+                </div>
+                <div class="col-sm-4">
+                    <p class="text-center"><strong>Rosebank</strong></p><br>
+                    <a href="#demo2" data-toggle="collapse">
+                        See More!
+                        <br>
+                        <br>
+                    </a>
+                    <div id="demo2" class="collapse">
+                        <iframe class="img-circle" src="https://maps.google.com/maps?q=the%20zone%20%40%20rosebank&t=&z=13&ie=UTF8&iwloc=&output=embed"
+                        width="255" height="255" frameborder="0" style="border:0" allowfullscreen></iframe>
+                        <br>
+                        <p>Our Second Store</p>
+                        <p>Opened in 2009</p>
+                        <p>Highlight : Live Music</p>
+                    </div>
+                </div>
+                <div class="col-sm-4">
+                    <p class="text-center"><strong>Cape Town</strong></p><br>
+                    <a href="#demo3" data-toggle="collapse">
+                        See More!
+                        <br>
+                        <br>
+                    </a>
+                    <div id="demo3" class="collapse">
+                        <iframe class="img-circle" src="https://maps.google.com/maps?q=V%20%26%20A%20cape%20town&t=&z=13&ie=UTF8&iwloc=&output=embed"
+                        width="255" height="255" frameborder="0" style="border:0" allowfullscreen></iframe>
+                        <br>
+                        <p>Our Third Store</p>
+                        <p>Opened in 2016</p>
+                        <p>Highlight : Seaside Views</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Container (Twitter Section) -->
+        <div id="tour" class="bg-1">
+            <div class="container">
+                <h3 class="text-center">Our Recent Twitter Mentions</h3>  
+                <br>
+                <ul class="nav nav-tabs">
+                    <li class="active"><a data-toggle="tab" href="#home">@DylanFairhurst</a></li>
+                    <li><a data-toggle="tab" href="#menu1">@MandyParsons</a></li>
+                    <li><a data-toggle="tab" href="#menu2">@DominicGermyshuis</a></li>
+                </ul>
+
+                <div class="tab-content">
+                    <div id="home" class="tab-pane fade in active">
+                        <p>01/02/2018</p>
+                        <p>AMAZING live music @DailyGrind tonight! Pull through! #shortstraw</p>
+                    </div>
+                    <div id="menu1" class="tab-pane fade">
+                        <p>12/02/2018</p>
+                        <p>Just had the most amazing latte @DailyGrind! #coffeelover</p>
+                    </div>
+                    <div id="menu2" class="tab-pane fade">
+                        <p>24/02/2018</p>
+                        <p>Just tried a Hazelnut syrup in my cappuccino @DailyGrind. #gamechanger</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+        <!-- Container (Contact Section) -->
+        <div id="contact" class="container">
+            <h3 class="text-center">Contact Us</h3>
+            <p class="text-center">Like Our Coffee? Let Us Know.</p>
+            <br>
+            <div class="row">
+                <div class="col-md-4">
+                    <p><span class="glyphicon glyphicon-map-marker"></span>Pretoria, Gauteng</p>
+                    <p><span class="glyphicon glyphicon-phone"></span>Phone: 071 579 8354</p>
+                    <p><span class="glyphicon glyphicon-envelope"></span>Email: dailyp@grind.com</p>
+                </div>
+                <div class="col-md-4">
+                    <p><span class="glyphicon glyphicon-map-marker"></span>Johannesburg, Gauteng</p>
+                    <p><span class="glyphicon glyphicon-phone"></span>Phone: 071 579 8355</p>
+                    <p><span class="glyphicon glyphicon-envelope"></span>Email: dailyj@grind.com</p>
+                </div>
+                <div class="col-md-4">
+                    <p><span class="glyphicon glyphicon-map-marker"></span>Cape Town, Western Cape</p>
+                    <p><span class="glyphicon glyphicon-phone"></span>Phone: 071 579 8356</p>
+                    <p><span class="glyphicon glyphicon-envelope"></span>Email: dailyc@grind.com</p>
+                </div>
+            </div>
+        </div>
+        <br>
+
+        <!-- Footer -->
+        <footer class="text-center">
+            <a class="up-arrow" href="#myPage" data-toggle="tooltip" title="TO TOP">
+                <span class="glyphicon glyphicon-chevron-up"></span>
+            </a><br><br>
+            <p>Daily Grind Coffee Co.</p> 
+        </footer>
+
+        <script>
+        
+        </script>
+
+
+        <!--Scripts-->
+        <script src="/node_modules/jquery/dist/jquery.js"></script>
+        <script src="/node_modules/bootstrap/dist/js/bootstrap.js"></script>
+        <script src="js/Subcomponent.js"></script>
+        <script src="js/Coffee.js"></script>
+        <script src="js/Order.js"></script>
+        <script src="js/EmployeeOrder.js"></script>
+        <script src="js/test.js"></script>
+    </body>
+</html>
