@@ -2,6 +2,7 @@
 <html>
     <head>
         <title>Daily Grind - Order</title>
+        <meta charset="utf-8"/>
         <link rel="stylesheet" href="main.css">
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
@@ -9,7 +10,7 @@
         <link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet" type="text/css">
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
         <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
-        <script src="/js/main.js"></script>
+        <script src="js/main.js"></script>
     </head>
 
     <body id="myPage" data-spy="scroll" data-target=".navbar" data-offset="50">
@@ -78,20 +79,26 @@
             <br>
             <div class="row">
                 <div class="col-md-4">
-                    <h4>Pretoria Punch</h4>
+                    <button class="btn">Pretoria Punch</button>
+                    <br>
+                    <br>
                     <p>Tall Americano</p>
                     <p>Extra Shot</p>
                 </div>
                 <div class="col-md-4">
-                    <h4>Joburg Juice</h4>
+                    <button class="btn">Joburg Juice</button>
+                    <br>
+                    <br>
                     <p>Short Latte</p>
                     <p>2 x Sugar</p>
                     <p>Cream</p>
                     <p>Hazelnut Syrup</p>
                 </div>
                 <div class="col-md-4">
-                    <h4>Cape Comfort</h4>
-                    <p>Grande Latte</p>
+                    <button class="btn">Cape Comfort</button>
+                    <br>
+                    <br>
+                    <p>Grande Cappuccino</p>
                     <p>Caramel Syrup</p>
                 </div>
             </div>
@@ -102,70 +109,69 @@
             <div class="container">
                 <h3 class="text-center">Or Customise Your Coffee</h3>  
                 <br>
-                <div class="row">
-                    <p class="text-center">Select Size and Style</p> 
+                <form id="orderformcoffee">
+                    <div class="row">
+                        <p class="text-center">Select Size and Style</p> 
+                        <br>
+                        <div class="col-sm-6 form-group">
+                            <select id="coffeesize" class="form-control">
+                                <option value="none">Select Size</option>
+                                <option value="short">Short (R12.00)</option>
+                                <option value="tall">Tall (R14.00)</option>
+                                <option value="grande">Grande (R16.00)</option>
+                            </select>
+                        </div>
+                        <div class="col-sm-6 form-group">
+                            <select id="coffeestyle" name="coffeestyle" class="form-control">
+                                <option value="none">Select Style</option>
+                                <option value="americano">Americano</option>
+                                <option value="cappuccino">Cappuccino - w/Cream (+ R1.00)</option>
+                                <option value="latte">Latte - w/Milk (+ R0.50)</option>
+                            </select>
+                        </div>
+                    </div>
                     <br>
-                    <div class="col-sm-6 form-group">
-                        <select class="form-control" id="sel1">
-                            <option>Select Size</option>
-                            <option>Short (R12.00)</option>
-                            <option>Tall (R14.00)</option>
-                            <option>Grande (R16.00)</option>
-                        </select>
-                    </div>
-                    <div class="col-sm-6 form-group">
-                        <select class="form-control" id="sel1">
-                            <option>Select Style</option>
-                            <option>Americano</option>
-                            <option>Cappuccino - w/Cream (+ R1.00)</option>
-                            <option>Latte - w/Milk (+ R0.50)</option>
-                        </select>
-                    </div>
-                </div>
-                <br>
 
-                <div class="row">
-                    <p class="text-center">Add Extras</p> 
+                    <div class="row">
+                        <p class="text-center">Add Extras</p> 
+                        <br>
+                        <div class="col-sm-4 form-group">
+                            <p class="text-center">Extra Espresso (+ R0.75)</p> 
+                            <input name="shots" class="form-control" type="number" value="0" max="3" min="0" id="espresso-number-input">
+                        </div>
+                        <div class="col-sm-4 form-group">
+                            <p class="text-center">Extra Milk (+ R0.50)</p>
+                            <input name="milkAdd" class="form-control" type="number" value="0" max="1" min="0" id="milk-number-input">
+                        </div>
+                        <div class="col-sm-4 form-group">
+                            <p class="text-center">Extra Cream (+ R1.00)</p>
+                            <input name="creamAdd" class="form-control" type="number" value="0" max="1" min="0" id="cream-number-input">
+                        </div>
+                    </div>
                     <br>
-                    <div class="col-sm-4 form-group">
-                        <p class="text-center">Extra Espresso (+ R0.75)</p> 
-                        <input class="form-control" type="number" value="0" id="example-number-input">
-                    </div>
-                    <div class="col-sm-4 form-group">
-                        <p class="text-center">Extra Milk (+ R0.50)</p>
-                        <input class="form-control" type="number" value="0" id="example-number-input">
-                    </div>
-                    <div class="col-sm-4 form-group">
-                        <p class="text-center">Extra Cream (+ R1.00)</p>
-                        <input class="form-control" type="number" value="0" id="example-number-input">
-                    </div>
-                </div>
-                <br>
 
-                <div class="row" style="margin-left:250px;">
-                    <div class="col-sm-4 form-group">
-                        <p class="text-center">Add Sugar (+ R0.20)</p>
-                        <input class="form-control" type="number" value="0" id="example-number-input">
+                    <div class="row" style="margin-left:250px;">
+                        <div class="col-sm-4 form-group">
+                            <p class="text-center">Add Sugar (+ R0.20)</p>
+                            <input name="sugars" class="form-control" type="number" value="0" max="2" min="0" id="sugar-number-input">
+                        </div>
+                        <div class="col-sm-4 form-group">
+                            <p class="text-center">Add Syrup (+ R5.00)</p>
+                            <select name="syrup" class="form-control" id="syrup">
+                                <option value="none">Select Syrup</option>
+                                <option value="hSyrup">Hazelnut</option>
+                                <option value="cSyrup">Caramel</option>
+                            </select>
+                        </div>
                     </div>
-                    <div class="col-sm-4 form-group">
-                        <p class="text-center">Add Syrup (+ R5.00)</p>
-                        <select class="form-control" id="sel1">
-                            <option>Select Syrup</option>
-                            <option>Hazelnut</option>
-                            <option>Caramel</option>
-                        </select>
-                    </div>
-                </div>
-                <br>
+                    <br>
 
-                <div class="row">
-                    <div class="col-md-12 form-group">
-                        <button class="btn pull-right" type="submit">Order!</button>
+                    <div class="row">
+                        <div class="col-md-12 form-group">
+                            <button id="addorder" class="btn pull-right" type="submit">Add to Order!</button>
+                        </div>
                     </div>
-                    <div class="col-md-12 form-group">
-                        <button class="btn pull-right" type="submit">Employee Order!</button>
-                    </div>
-                </div>
+                </form>
                     
             </div>
         </div>
@@ -174,7 +180,46 @@
         <!-- Container (Contact Section) -->
         <div id="contact" class="container">
             <h3 class="text-center">Order Summary</h3>
+            <table id="orderTable" class="table">
+                <thead>
+                    <th>Coffee Name</th>
+                    <th>Coffee Price</td>
+                    <th></th>
+                </thead>
+                
+                <tbody>
+                </tbody>
+            </table>
+
+            <div class="row">
+                <div class="col-md-12">
+                    <button id="order" class="btn pull-right" type="submit">Place Order!</button>
+                </div>
+                <br>
+                <br>
+                <div class="col-md-12">
+                    <button id="employeeorder" class="btn pull-right" type="submit">Place Employee Order!</button>
+                </div>
+            </div>
             
+            <div id="paymentModal" class="modal">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <span class="close">&times;</span>
+                        <h3>Order Confirmed!</h3>
+                    </div>
+                    <div class="modal-body">
+                        <p>your total is <span class="totalNormalOrder"></span></p>
+                        <p>Please refresh the page to clear the Order Table.</p>
+                    </div>
+                    <div class="modal-footer">
+                        <p>Thank you for supporting Daily Grind!</p>
+                    </div>
+                    <span class="close">&times;</span>
+                    
+                </div>
+            </div>
+
         </div>
         <br>
 
@@ -192,12 +237,14 @@
 
 
         <!--Scripts-->
-        <script src="/node_modules/jquery/dist/jquery.js"></script>
-        <script src="/node_modules/bootstrap/dist/js/bootstrap.js"></script>
+        <script src="node_modules/jquery/dist/jquery.js"></script>
+        <script src="node_modules/bootstrap/dist/js/bootstrap.js"></script>
         <script src="js/Subcomponent.js"></script>
         <script src="js/Coffee.js"></script>
         <script src="js/Order.js"></script>
         <script src="js/EmployeeOrder.js"></script>
+        <script src="model.js"></script>
+        <script src="controller.js"></script>
         <script src="js/test.js"></script>
     </body>
 </html>

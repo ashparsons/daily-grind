@@ -14,7 +14,7 @@ $(function() {
             var row = '<tr id="orderRow">' +
             '    <td id="showOrders">' + showOrders + '</td>' +
             '    <td id="showPrices">' + showPrices + '</td>' +
-            '    <td><button id="remove">Remove</button></td>' +
+            '    <td><button id="remove" class="btn btn-danger pull-right" type="submit">Remove</button>' +
             '</tr>';
             $("#orderTable tbody").append(row);
         }
@@ -23,30 +23,21 @@ $(function() {
     
     //UPDATE FORM
     
-    var updateForm = function() {
+    // var updateForm = function() {
         // Empty the form
-        $("#coffeeOrder").find("#style").prop("checked", false);
-        $("#coffeeOrder").find("#size").prop("checked", false);
-        $("#coffeeOrder").find("#espressos").val("0");
-        $("#coffeeOrder").find("#milk").val("0");
-        $("#coffeeOrder").find("#cream").val("0");
-        $("#coffeeOrder").find("#sugar").val("0");
-        $("#coffeeOrder").find("#syrup").val("0");
-        
-        /*$("#coffeeOrder").find("#style").val("americano");
-        $("#coffeeOrder").find("#size").val("short");
-        $("#coffeeOrder").find("#espressos").val("0");
-        $("#coffeeOrder").find("#milk").val("0");
-        $("#coffeeOrder").find("#cream").val("0");
-        $("#coffeeOrder").find("#sugar").val("0");
-        $("#coffeeOrder").find("#hazelnutSyrup").val("0");
-        $("#coffeeOrder").find("#caramelSyrup").val("0");*/
-    }
+        // $("#coffeeorder").find("#coffeestyle").val("none");
+        // $("#coffeeorder").find("#coffeesize").val("none");
+        // $("#coffeeorder").find("#espresso-number-input").val("0");
+        // $("#coffeeorder").find("#milk-number-input").val("0");
+        // $("#coffeeorder").find("#cream-number-input").val("0");
+        // $("#coffeeorder").find("#sugar-number-input").val("0");
+        // $("#coffeeorder").find("#syrup").val("none");
+    // }
     
     //REFRESH
     
     function refresh() {
-        updateForm()
+        // updateForm()
         // Empty the form
         updateModel()
         // Refelct the model - display the names and prices of all coffess ordered so far
@@ -54,29 +45,29 @@ $(function() {
     
     //ORDER FORM
     
-    $("#order").on("click", function(event) {
+    $("#addorder").on("click", function(event) {
         
         event.preventDefault();
         
-        var style = $('input[name="coffeestyle"]:checked').val();
+        var style = $('select[id="coffeestyle"]').val();
         console.log(style);
         
-        var size = $('input[name="coffeesize"]:checked').val();
+        var size = $('select[id="coffeesize"]').val();
         console.log(size);
         
-        var espressos = parseInt($('input[name="shots"]:checked').val()); //$('#espressos').val();
+        var espressos = parseInt($('input[name="shots"]').val()); //$('#espressos').val();
         console.log(espressos);
         
-        var milk = parseInt($('input[name="milkAdd"]:checked').val()); //$('#milk').val();
+        var milk = parseInt($('input[name="milkAdd"]').val()); //$('#milk').val();
         console.log(milk);
         
-        var cream = parseInt($('input[name="creamAdd"]:checked').val()); //$('#cream').val();
+        var cream = parseInt($('input[name="creamAdd"]').val()); //$('#cream').val();
         console.log(cream);
         
-        var sugar = parseInt($('input[name="sugars"]:checked').val()); //$('#sugar').val();
+        var sugar = parseInt($('input[name="sugars"]').val()); //$('#sugar').val();
         console.log(sugar);
         
-        var syrup = $('input[name="syrup"]:checked').val(); //var hazelnutSyrup = $('#hazelnutSyrup').val(); var caramelSyrup = $('#caramelSyrup').val();
+        var syrup = $('select[name="syrup"]').val(); //var hazelnutSyrup = $('#hazelnutSyrup').val(); var caramelSyrup = $('#caramelSyrup').val();
         console.log(syrup);
         
         // Grab all the data from the form
@@ -121,9 +112,12 @@ $(function() {
         var totalNormalPrice = $(".totalNormalOrder").append("R " + order.getPrice());
         var totalEmployeePrice = $("#totalEmployeeOrder").append("R " + order.getPrice() - (0.25 * order.getPrice()));
         //var totalEmployeePrice = $("#totalEmployeeOrder").append("R " + employeeOrder.getPrice());
-        
+
         refresh()
         // refresh()
+
+        $("form").trigger("reset");
+
     });
     
     //RADIO BUTTONS
@@ -167,10 +161,14 @@ $(function() {
     //MODAL FUNCTIONALITY
     
     var modal = document.getElementById('paymentModal');
-    var button = document.getElementById("ordernow");
+    var button = document.getElementById("order");
+    var button2 = document.getElementById("employeeorder");
     var close = document.getElementsByClassName("close")[0];
 
     button.onclick = function() {
+        modal.style.display = "block";
+    }
+    button2.onclick = function() {
         modal.style.display = "block";
     }
     close.onclick = function() {
@@ -180,13 +178,6 @@ $(function() {
         if (event.target == modal) {
             modal.style.display = "none";
         }
-    };
-    
-    var modal2 = document.getElementById('paymentModal2');
-    var button2 = document.getElementById("employeeOrder");
-
-    button2.onclick = function() {
-        modal2.style.display = "block";
     };
     
 });

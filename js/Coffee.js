@@ -53,7 +53,7 @@ Coffee.prototype.getName = function() {
         }
     } 
     
-    if (this.sugars > 0) {
+    if (this.sugars === 1 || this.sugars === 2) {
         coffeeName = "Sweet " + coffeeName;
     }
     if (this.size === "small" && this.espressos > 1) {
